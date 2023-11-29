@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Bevellier', sans-serif;
+}
 #nav{
     background-color: black;
     width: 100vw;
@@ -73,7 +76,7 @@ p{
     position: absolute;
     top: 25%;
     text-align: center;
-    left: 10%;
+    left: 23%;
 }
 #title{
  font-size: 100px;
@@ -186,7 +189,7 @@ p{
     font-size: 40px;
   }
   #specialDetail{
-    margin-top: 4%;
+    margin-top: 20%;
     line-height: 70px;
     text-align: center;
  }
