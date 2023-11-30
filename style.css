@@ -58,7 +58,7 @@ top: 134%;
     height: 100%;
     align-items: center;
     justify-content: space-between;
-    font-size: 25px;
+    font-size: 1.75vw;
 }
 .section p:hover{
     background-color: #EB9E44;
@@ -76,7 +76,8 @@ p{
     position: absolute;
     top: 25%;
     text-align: center;
-    left: 23%;
+    /* left: 23%; */
+    width: 100%;
 }
 #more{
   width: 9vw;
@@ -85,6 +86,7 @@ p{
   background-color: rgb(0, 0,0,0.35);
   border: #EB9E44 3px solid;
   border-radius: 10px;
+  font-size: 1.25vw;
 
 }#buttonBox{
   display: flex;
@@ -93,14 +95,14 @@ p{
   margin-top: 15%;
 }
 #title{
- font-size: 100px;
+ font-size: 7vw;
  -webkit-text-stroke-width: 1.5px;
  -webkit-text-stroke-color: #000000;
  animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
  z-index: 2;
 }
 #subTitle{
-    font-size: 40px;
+    font-size: 3.5vw;
     width: 50%;
     text-align: center;
     margin-left: 25%;
@@ -121,11 +123,14 @@ p{
   #search{
     position: absolute;
     z-index: 2;
-    left: 35%;
+    /* left: 35%; */
     top: 110%;
+    width: 100%;
+    text-align: center;
+    padding-left: 27%;
   }
   #searchTop{
-    font-size: 40px;
+    font-size: 3.5vw;
     text-align: center;
     width: 63%;
   }
@@ -158,12 +163,12 @@ p{
     margin-left: 5%;
     border: none;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 1.25vw;
   }
   .searchBox{
     display: flex;
-    margin-top: 7%;
-    margin-left: 7%;
+    margin-top: 5%;
+    margin-left:11%;
   }
   #random{
     height: 55vh;
@@ -191,17 +196,17 @@ p{
     box-shadow: 1px 1px 20px 11px rgba(214, 211, 22, 0.74);
   }
   #tile{
-    font-size: 40px;
+    font-size: 3.5vw;
     text-align: center;
   }
   a{
     text-decoration: none;
   }
   #specialName{
-    font-size: 50px;
+    font-size: 4vw;
   }
   #specialCategory{
-    font-size: 40px;
+    font-size: 3.5vw;
   }
   #specialDetail{
     margin-top: 50px;
@@ -212,7 +217,7 @@ p{
     position: absolute;
     top: 230%;
     display: grid;
-    gap: 19% 6%;
+    gap: 10% 6%;
     padding: 0 5% 0 8%;
     grid-template-rows: repeat(3,1fr);
     grid-template-columns: repeat(3,1fr);
@@ -275,13 +280,13 @@ p{
 }
 #ingredients{
     height: 90%;
-    width: 45%;
+    width: 50%;
     background-color: #000000;
     box-shadow: 2px -1px 17px 17px rgba(235,157,68,0.75) inset;
     color: #EB9E44;
 }
 #list{
-    padding-left: 10%;
+    padding-left: 2em;
     height: 86%;
     /* border: #EB9E44 3px s?xolid; */
     line-height: 50px;
@@ -293,7 +298,7 @@ p{
 }
 #head{
     text-align: center;
-    font-size: 30px;
+    font-size: 2vw;
     margin-top: 5%;
 }
 #mail{
@@ -342,7 +347,7 @@ svg{
     }
 }
 
-@media screen and (max-width:450px){
+@media screen and (max-width:500px){
  .section{
   font-size: 17px;
  }
@@ -363,7 +368,7 @@ svg{
   background-image: url(./Assets/Group\ 1.png);
  }
  #search{
-  left: 0;
+  padding-left: 0;
  }
  #searchTop{
   font-size: 28px;
@@ -374,9 +379,11 @@ svg{
  }
  hr{
   width: 90%;
+  margin-left: 9%;
  }
  #tap{
   width: 25%;
+  font-size: 15px;
  }
  #special{
   width: 70%;
@@ -388,12 +395,33 @@ svg{
  #more{
   width: 30vw;
  }
+ #tile{
+  font-size: 28px;
+ }
+ #specialName{
+  font-size: 45px;
+ }
+ #more{
+  font-size: 18px;
+ }
+ #buttonBox{
+  margin-top: 7%;
+ }
+ #specialCategory{
+  font-size: 28px;
+ }
  #gridBox{
   top: 250%;
   gap: 5% 6%;
  }
  .item{
-  font-size: 28px;
+  font-size: 25px;
+ }
+ #head{
+  font-size: 22px;
+ }
+ #ingredients{
+  width: 75%;
  }
 }
   
