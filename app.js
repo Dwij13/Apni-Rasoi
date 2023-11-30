@@ -5,7 +5,10 @@ let gridBox = document.getElementById("gridBox")
 let btn = document.getElementById("tap")
 let modal = document.getElementById("modal")
 let order = document.getElementById("order")
-
+let more = document.getElementById("more")
+more.addEventListener("click",()=>{
+    getRandom()
+})
 
 randomImg.addEventListener("click",()=>{
     modal.style.display="flex"
@@ -14,15 +17,14 @@ modal.addEventListener("click",()=>{
     modal.style.display="none"
 })
 btn.addEventListener("click",()=>{
+    setTimeout(()=>{
+        window.scrollTo(0,1700);
+    },750)
+    
     gridBox.innerHTML="";
     let category = document.getElementById("category").value;
     getCategory(category);
 })
-
-
-
-
-
 
 async function getRandom(){
     try{
@@ -32,6 +34,7 @@ async function getRandom(){
          let allItems = data.meals[0]
          console.log(allItems)
          console.log()
+         order.innerHTML=""
         for(let i=1;i<=20;i++){
             if(allItems[`strIngredient${i}`]!=""){
             let list = document.createElement("li")
