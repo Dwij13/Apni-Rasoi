@@ -9,6 +9,8 @@ let more = document.getElementById("more")
 more.addEventListener("click",()=>{
     getRandom()
 })
+let input = document.getElementById("category");
+let categoryBox = document.getElementById("categoryBox")
 
 randomImg.addEventListener("click",()=>{
     modal.style.display="flex"
@@ -24,6 +26,17 @@ btn.addEventListener("click",()=>{
     gridBox.innerHTML="";
     let category = document.getElementById("category").value;
     getCategory(category);
+})
+input.addEventListener("keypress",()=>{ // enter button event
+    if(event.key=="Enter"|| event.KeyCode ==13){
+        setTimeout(()=>{
+            window.scrollTo(0,1700);
+        },750)
+        
+        gridBox.innerHTML="";
+        let category = document.getElementById("category").value;
+        getCategory(category);
+    }
 })
 
 async function getRandom(){
@@ -62,9 +75,13 @@ async function getCategory(category){
         let catUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
         let generate = await fetch(catUrl)
         let food = await generate.json();
-        
+        categoryBox.innerHTML=""
         object=food.meals;
         console.log(object)
+        let cat = document.createElement("p")
+        cat.className="categoryName"
+        categoryBox.append(cat)
+        cat.textContent= category.toUpperCase()
         for(let i=0;i<object.length;i++){
             let item = document.createElement("div")
             item.className="item"
